@@ -1,0 +1,318 @@
+---
+---
+
+// VARIABLES
+
+$background: #111;
+$background-index: #1b1b1b;
+$background-nav: #222;
+$background-table-odd: #272727;
+$background-table-even: #333333;
+$text: #fff;
+$link: #999;
+$link-hover: #888;
+$public-beta: #1ac553;
+$in-development: #e48e2b;
+$publically-available: rgb(48, 176, 46);
+$not-started: rgb(184, 17, 17);
+$private-beta: rgb(24, 120, 190);
+$button-color: #1e5194;
+
+// REGULAR ELEMENTS
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: RubikLight;
+	background: $background;
+	color: $text;
+	z-index: -1;
+}
+
+a {
+	color: $link;
+}
+
+a:hover {
+	color: $link-hover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: RubikMedium;
+}
+
+// CHANGE HEADING FONT SIZES
+
+h1 {
+	font-size: 2.1em;
+}
+
+h2 {
+	font-size: 1.7em;
+}
+
+h3 {
+	font-size: 1.3em;
+}
+
+// NAVBAR
+
+nav {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: 1;
+}
+
+.nav-elements {
+	padding-left: 3em;
+	padding-right: 3em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background: $background-nav;
+	padding: 1em;
+	font-size: 1.2em;
+
+	li {
+		float: left;
+		list-style-type: none;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		display: block;
+		text-align: center;
+		padding: 0.5em 0.5em;
+		text-decoration: none;
+		color: inherit;
+		float: right;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+nav-mobile {
+	display: none;
+}
+
+// FOOTER
+
+footer {
+	text-align: center;
+	opacity: 50%;
+	padding: 1em;
+}
+
+// INDEX
+
+.index-wrapper {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(315deg, rgb(95, 24, 173) 0%, rgb(0, 255, 231) 100%);
+
+	.guide-link {
+		background-color: #00ddd3;
+		color: #fff;
+		border: none;
+		font-family: RubikLight;
+		padding: 1em 1.5em;
+		font-size: 1.2em;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 0.5em;
+	}
+
+	.title-text {
+		font-size: 5em;
+		font-family: RubikBold;
+	}
+	
+	.title-subtext {
+		font-size: 3em;
+	}
+	
+	.title {
+		line-height: 0.1em;
+	}
+}
+
+// SERVICES
+
+.services-table {
+	border-collapse: collapse;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+
+	tr {
+		color: $text;
+	}
+
+	th {
+		font-size: 1.3em;
+	}
+
+	td {
+		font-size: 1.1em;
+	}
+
+	td, th {
+		padding: 1em;
+	}
+
+	tr:nth-child(even) {
+		background: $background-table-even;
+	}
+
+	tr:nth-child(odd) {
+		background: $background-table-odd;
+	}
+
+	th {
+		padding-top: 0.8em;
+		padding-bottom: 0.8em;
+		background: $background-nav;
+		color: white;
+	}
+
+	.public-beta {
+		background: $public-beta;
+	}
+	
+	.in-development {
+		background: $in-development;
+	}
+
+	.publically-available {
+		background: $publically-available;
+	}
+
+	.not-started {
+		background: $not-started;
+	}
+
+	.private-beta {
+		background: $private-beta;
+	}
+}
+
+// ALIGN CLASSES
+
+.center {
+	text-align: center;
+}
+
+.f-left {
+	float: left;
+}
+
+.f-right {
+	float: right;
+}
+
+// OPACITY CLASSES
+
+.o25 {
+	opacity: 25%;
+}
+
+.o50 {
+	opacity: 50%;
+}
+
+.o75 {
+	opacity: 75%;
+}
+
+// OTHER
+
+container {
+	margin-left: 5em;
+	margin-right: 5em;
+	padding: 2em;
+}
+
+.nav-link:hover a {
+	text-decoration: none;
+}
+
+.nav-underline:hover {
+	text-decoration: underline;
+}
+
+.section {
+	padding: 2em;
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+	.col {
+		padding: 1em;
+	}
+}
+
+.faq-text {
+	text-align: left;
+	display: inline-block;
+}
+
+// MEDIA RULES
+
+@media only screen and (max-width: 950px) {
+	.index-wrapper {
+		.title-text {
+			font-size: 3em;
+		}
+		
+		.title-subtext {
+			font-size: 2em;
+		}
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.nav-elements {
+		font-size: 1.4em;
+	}
+}
+
+@media only screen and (max-width: 530px) {
+	.index-wrapper {
+		.title-subtext {
+			line-height: 1em;
+		}
+	}
+}
+
+@media only screen and (max-width: 455px) {
+	.nav-elements {
+		justify-content: center;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	.socials {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.socials {
+		display: block;
+	}
+}
